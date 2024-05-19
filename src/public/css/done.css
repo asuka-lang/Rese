@@ -1,0 +1,64 @@
+body {
+    min-width: 1040px;
+    background: #f5f3f3;
+}
+
+.header {
+    padding: 50px 100px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage-ttl {
+    display: flex;
+}
+
+.rese-icon {
+    box-shadow: 3px 3px 2px #99979e;
+}
+
+.title {
+    padding-left: 20px;
+}
+
+.ttl-name{
+    margin: auto;
+    color: rgb(5, 90, 248);
+}
+
+.done__content {
+    width: 28%;
+    height: 300px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 2px solid #f1f0f5;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #99979e;
+    background: #fff;
+}
+
+.done__message{
+    width: 100%;
+}
+
+.reserved {
+    font-size: 24px;
+    text-align: center;
+}
+
+.back__button {
+    text-align: center;
+}
+
+.home {
+    margin: 20px;
+    height: 35px;
+    width: 80px;
+    background: rgb(5, 90, 248);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

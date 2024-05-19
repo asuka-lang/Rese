@@ -1,0 +1,110 @@
+body {
+    min-width: 1040px;
+    background: #f5f3f3;
+}
+
+.header {
+    padding: 50px 100px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage-ttl {
+    display: flex;
+}
+
+.rese-icon {
+    box-shadow: 3px 3px 2px #99979e;
+}
+
+.title {
+    padding-left: 20px;
+}
+
+.ttl-name {
+    margin: auto;
+    color: rgb(5, 90, 248);
+}
+
+.login__content {
+    margin-top: 100px;
+}
+
+.login__heading {
+    width: 28%;
+    background: rgb(5, 90, 248);
+    padding-left: 20px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 auto;
+    box-shadow: 2px 0 2px #99979e;
+}
+
+.heading-logo {
+    color: #fff;
+    font-size: 20px;
+    line-height: 70px;
+    margin: 0;
+}
+
+.login__inner {
+    width: 28%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border: 2px solid #f1f0f5;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 2px 2px 1px #99979e;
+    background: #fff;
+}
+
+.form__table{
+    width: 100%;
+}
+
+.form__table__row {
+    height: 55px;
+    width: 100%;
+}
+
+.img{
+    padding: 0 20px;
+    width: 18%;
+}
+
+.email-icon,
+.pass-icon {
+    width: 100%;
+    height: 33px;
+}
+
+.email,
+.password {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    height: 30px;
+    width: 90%;
+    font-size: 15px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+}
+
+.login__submit {
+    text-align: right;
+    margin: 15px;
+    padding-right: 15px;
+}
+
+.submit__button {
+    height: 35px;
+    width: 80px;
+    background: rgb(5, 90, 248);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,177 @@
+body {
+    min-width: 1040px;
+    background: #f5f3f3;
+}
+
+.header {
+    padding: 50px 100px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage-ttl {
+    display: flex;
+}
+
+.rese-icon {
+    box-shadow: 3px 3px 2px #99979e;
+}
+
+.title {
+    padding-left: 20px;
+}
+
+.ttl-name {
+    margin: auto;
+    color: rgb(5, 90, 248);
+}
+
+.user__name{
+    text-align: center;
+}
+
+.my__contents{
+    display: flex;
+}
+
+.my__reserves{
+    width: 40%;
+    margin-left: 120px;
+}
+
+.reserves-box{
+    width: 80%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(32, 105, 240);
+    padding: 20px 30px;
+    margin-bottom: 30px;
+}
+
+.box-header{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+}
+
+.box-header__ttl{
+    display: flex;
+    align-items: center;
+}
+
+.reserves-icon{
+    font-size: 30px;
+    margin: 0;
+}
+
+.reserves-count{
+    padding-left: 30px;
+}
+
+.delete__button{
+    border: none;
+    background: rgb(32, 105, 240);
+}
+
+.round_btn {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: rgb(32, 105, 240);
+}
+
+.round_btn::before,
+.round_btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 12px;
+    background: #fff;
+}
+
+.round_btn::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.round_btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.reserves-table {
+    color: #fff;
+}
+
+.reserves-table__row{
+    line-height: 45px;
+}
+
+.data{
+    padding-left: 35px;
+}
+
+.favorites-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 120px;
+}
+
+.favorites-shop{
+    width: 270px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+.shop__img {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px 5px 0 0;
+}
+
+.shop__text {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    background: #fff;
+    height: 140px;
+}
+
+.shop__title {
+    font-size: 17px;
+    margin-bottom: 1px;
+}
+
+.shop__area,
+.shop__genre {
+    font-size: 11px;
+}
+
+.buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail__btn {
+    width: 95px;
+    color: #fff;
+    background: rgb(5, 90, 248);
+    line-height: 28px;
+    border: none;
+    border-radius: 5px;
+}
+
+.favorite__btn {
+    border: none;
+    background: #fff;
+}
