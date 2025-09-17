@@ -1,4 +1,4 @@
-# Rese
+## Rese
 
 #### 飲食店予約サービス
 <img width="1437" alt="shop_all" src="https://github.com/asuka-lang/Rese/assets/143139948/b2bbdc56-0960-406c-98da-82d293a91993">
