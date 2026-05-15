@@ -1,0 +1,81 @@
+.QrScan-wrapper{
+    text-align: center
+}
+
+.QrScan-ttl{
+    font-size: 21px;
+}
+
+.backBtn{
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+.modal.active{
+    display: block;
+}
+
+.modal-overlay{
+    position: absolute;
+    inset: 0;
+}
+
+.result-box{
+    position: relative;
+    margin: 100px auto;
+    padding: 20px 10px;
+    border-radius: 12px;
+    background: #fff;
+    width: min(90%,320px);
+    text-align: center;
+    z-index: 10000;
+}
+
+.result-ttl{
+    font-size: 21px;
+}
+
+.result-text{
+    font-size: 18px;
+}
+
+.close-btn{
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+@media(min-width:769px){
+    .QrScan-ttl {
+        font-size: 25px;
+    }
+
+    .backBtn {
+        font-size: 22px;
+        line-height: 50px;
+    }
+
+    .result-box {
+        padding: 20px;
+        width: 350px;
+    }
+
+    .result-ttl {
+        font-size: 23px;
+    }
+
+    .result-text {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+    }
+
+}

@@ -1,32 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.app')
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+@endsection
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rese</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
-</head>
-
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="homepage-ttl">
-                <input class="rese-icon" type="image" src="{{ asset('img/icon.jpg') }}" alt="" width="50" height="50" />
-                <div class="title">
-                    <h1 class="ttl-name">Rese</h1>
-                </div>
-            </div>
-        </div>
-    </header>
+@section('content')
     <div class="register__content">
         <div class="register__heading">
             <p class="heading-logo">Registration</p>
         </div>
         <div class="register__inner">
+            @if(Request::is('admin/*'))
+            <form class="register__form" action="/admin/register" method="post">
+            @else
             <form class="register__form" action="/thanks" method="post">
+            @endif
                 @csrf
                 <table class="form__table">
                     <tr class="form__table__row">
@@ -67,5 +54,4 @@
             </form>
         </div>
     </div>
-
-</body>
+@endsection

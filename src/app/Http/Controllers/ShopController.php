@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ReserveRequest;
 use Illuminate\Http\Request;
 use App\Models\Shop;
+use App\Models\Area;
+use App\Models\Genre;
 use App\Models\Reserve;
 use App\Models\Favorite;
 use Carbon\Carbon;
@@ -14,44 +16,40 @@ class ShopController extends Controller
 {
     public function index()
     {
-        $shops = Shop::all();
-        $user = Auth::user();
-
-        if($user){
-            $shops = Shop::with('favorite')->get();
-            return view('index',compact('shops','user'));
-        }else{
-            return view('index', compact('shops'));
-        }
-    }
-
-
-    public function search(Request $request)
-    {
-        $shops = Shop::AreaSearch($request->area)->GenreSearch($request->genre)->KeywordSearch($request->keyword)->get();
+        $areas = Area::all();
+        $genres = Genre::all();
+        $shops = Shop::with('area', 'genre')->get();
 
         $user = Auth::user();
 
         if (!$user) {
-            return view('index', compact('shops'));
+            return view('index', compact('shops', 'areas', 'genres'));
         } else {
             $userId = $user->id;
-            $favorites = Favorite::where('user_id', $userId)->get();
-            foreach ($favorites as $favorite) {
-                $fav_shop = $favorite->shop_id;
-            }
-            if ($fav_shop) {
-                return view('index', compact('shops', 'fav_shop'));
-            }
-            return view('index', compact('shops'));
+            return view('index', compact('shops','user', 'userId','areas', 'genres'));
+        }
+    }
+
+    public function search(Request $request)
+    {
+        $areas = Area::all();
+        $genres = Genre::all();
+        $shops = Shop::AreaSearch($request->area_id)->GenreSearch($request->genre_id)->KeywordSearch($request->keyword)->get();
+
+        $user = Auth::user();
+
+        if (!$user) {
+            return view('index', compact('shops', 'areas', 'genres'));
+        } else {
+            $userId = $user->id;
+            return view('index', compact('shops', 'user','userId', 'areas', 'genres'));
         }
     }
 
 
-
     public function detail(Request $request,$shop_id)
     {
-        $shop = Shop::find($request->id);
+        $shop = Shop::with('area','genre')->find($request->id);
         $today = new Carbon('today');
 
         $user = Auth::user();
@@ -86,4 +84,5 @@ class ShopController extends Controller
         $favorite->delete();
         return back();
     }
+
 }

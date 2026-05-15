@@ -1,55 +1,43 @@
-body {
-    min-width: 1040px;
-    background: #f5f3f3;
-}
-
-.header {
-    padding: 50px 100px;
-}
-
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-}
-
-.homepage-ttl {
-    display: flex;
-}
-
-.rese-icon {
-    box-shadow: 3px 3px 2px #99979e;
-}
-
-.title {
-    padding-left: 20px;
-}
-
-.ttl-name {
-    margin: auto;
-    color: rgb(5, 90, 248);
-}
-
 .user__name{
     text-align: center;
+    font-size: 23px;
+}
+
+.message{
+    font-size: 17px;
+    width: 85%;
+    margin: 0 auto;
+    color: #5e5b5b;
 }
 
 .my__contents{
+    width: 85%;
+    margin: 0 auto 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .my__reserves{
-    width: 40%;
-    margin-left: 120px;
+    width: 100%;
 }
 
-.reserves-box{
-    width: 80%;
-    height: 300px;
+.reserves-status,
+.checkout-status{
+    font-size: 22px;
+}
+
+.reserves-box,
+.checkout-box{
+    width: 100%;
+}
+
+.box{
     border: none;
     border-radius: 5px;
     background: rgb(32, 105, 240);
-    padding: 20px 30px;
-    margin-bottom: 30px;
+    padding: 20px 10px;
+    width: min(100%, 500px);
+    margin-bottom: 20px;
 }
 
 .box-header{
@@ -57,6 +45,8 @@ body {
     justify-content: space-between;
     color: #fff;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .box-header__ttl{
@@ -65,12 +55,101 @@ body {
 }
 
 .reserves-icon{
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
 }
 
 .reserves-count{
     padding-left: 30px;
+    padding-right: 20px;
+    font-size: 19px;
+    margin: 0;
+}
+
+.change-btn{
+    border: none;
+    line-height: 25px;
+    width: 50px;
+    border-radius: 3px;
+    color: #0748ee;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.modal-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content{
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    width: min(90%, 450px);
+    border-radius: 5px;
+    padding: 30px;
+    background: rgb(236 236 244);
+    border: none;
+}
+
+.modal.active{
+    display: block;
+}
+
+
+.reserve-id{
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+.change-form{
+    width: 100%;
+}
+
+.form-table{
+    width: 100%;
+}
+
+.form-inner{
+    line-height: 40px;
+}
+
+.update{
+    font-size: 16px;
+    font-weight: bold;
+    width: 40%;
+    color: #000;
+}
+
+.input{
+    width: 100%;
+}
+
+.date,
+.time,
+.number{
+    height: 30px;
+    font-size: 18px;
+    width: min(100%,200px);
+}
+
+.change{
+    width: 100px;
+    line-height: 30px;
+    margin: 10px 0;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .delete__button{
@@ -81,8 +160,8 @@ body {
 .round_btn {
     display: block;
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: 2px solid #fff;
     border-radius: 50%;
     background: rgb(32, 105, 240);
@@ -107,29 +186,162 @@ body {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.box-inner{
+    width: 90%;
+    margin: 10px auto;
+}
+
 .reserves-table {
     color: #fff;
+    font-size: 17px;
+    width: 100%;
 }
 
 .reserves-table__row{
     line-height: 45px;
 }
 
-.data{
-    padding-left: 35px;
+.column{
+    width: 100px;
+}
+
+.qr-btn{
+    padding: 5px 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.close,
+.qr-close,
+.less{
+    display: block;
+    margin: 0 0 0 auto;
+    font-size: 18px;
+}
+
+.qr-title{
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    color: #000;
+}
+
+.qr-image{
+    width: min(100%,250px);
+    display: block;
+    margin: 0 auto;
+}
+
+.qr,
+.review{
+    text-align: right;
+}
+
+.review-btn{
+    border: none;
+    line-height: 35px;
+    width: min(60%,150px);
+    border-radius: 3px;
+    color: #0748ee;
+    background-color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.review-form{
+    width: 100%;
+}
+
+.score,
+.comment{
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    color: #000;
+}
+
+.review-select{
+    position: relative;
+}
+
+.review-select::after{
+    position: absolute;
+    content: "▼";
+    font-size: 12px;
+    color: #7b7b68;
+    pointer-events: none;
+    right: 15px;
+}
+
+.five-stars{
+    height: 40px;
+    width: 100%;
+    appearance: none;
+    font-size: 20px;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.comment-text{
+    resize: none;
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.review-submit{
+    height: 40px;
+    width: 90px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price__column,
+.price__data{
+    font-weight: bold;
+}
+
+.payment{
+    background: #13f39f;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.payment-button{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.not-reserves,
+.not-checkouts{
+    font-size: 20px;
+}
+
+.my__favorites{
+    width: 100%;
+}
+
+.favorites-shops{
+    font-size: 22px;
 }
 
 .favorites-box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 120px;
+    width: 100%;
+    gap: 20px;
 }
 
-.favorites-shop{
-    width: 270px;
-    margin-bottom: 30px;
-    margin-right: 20px;
+.shop-box{
+    width: 270px
 }
 
 .shop__img {
@@ -144,6 +356,7 @@ body {
     border-radius: 0 0 5px 5px;
     background: #fff;
     height: 140px;
+    border: 1px solid #bab1b1;
 }
 
 .shop__title {
@@ -174,4 +387,90 @@ body {
 .favorite__btn {
     border: none;
     background: #fff;
+}
+
+@media (min-width:769px) {
+    .user__name {
+        font-size: 30px;
+    }
+
+    .message {
+        font-size: 21px;
+    }
+
+    .my__reserves {
+        width: 50%;
+    }
+
+    .reserves-box,
+    .checkout-box{
+        width: min(90%,550px);
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .modal-content{
+        width: min(90%,550px);
+        padding: 40px;
+    }
+
+    .reserve-id {
+        font-size: 25px;
+    }
+
+    .form-inner {
+        line-height: 45px;
+    }
+
+    .update {
+        font-size: 22px;
+    }
+
+    .date,
+    .time,
+    .number{
+        height: 35px;
+        font-size: 21px;
+        width: 250px;
+    }
+
+    .change {
+        line-height: 40px;
+        font-size: 21px;
+        margin: 15px 0;
+    }
+
+    .qr-title {
+        font-size: 25px;
+    }
+
+    .qr-image {
+        width: 300px;
+    }
+
+    .score,
+    .comment {
+        font-size: 23px;
+    }
+
+    .five-stars {
+        height: 45px;
+        font-size: 23px;
+    }
+
+    .comment-text {
+        font-size: 20px;
+    }
+
+    .not-reserves,
+    .not-checkouts{
+        font-size: 20px;
+    }
+
+    .my__favorites{
+        width: 50%;
+    }
+
 }
