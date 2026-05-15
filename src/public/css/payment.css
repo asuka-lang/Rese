@@ -1,0 +1,60 @@
+.checkout__content{
+    text-align: center;
+    margin: 50px auto;
+    width: 85%;
+}
+
+.check-mark{
+    width: min(20%,50px);
+    font-size: 30px;
+    border-radius: 50%;
+    border: 5px solid;
+    margin: 0 auto;
+    color: #25bfb8;
+}
+
+.success,
+.cancel{
+    font-size: 23px;
+    margin: 20px 0;
+}
+
+
+.message{
+    color: #7d7474;
+    font-size: 18px;
+}
+
+.mypage-link{
+    margin: 50px auto;
+}
+
+.mypage-btn{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    background: #dedada;
+}
+
+@media (min-width:769px){
+    .check-mark {
+        width: 100px;
+        font-size: 50px;
+    }
+
+    .success,
+    .cancel {
+        font-size: 40px;
+    }
+
+    .message{
+        font-size: 25px;
+    }
+
+    .mypage-btn{
+        font-size: 23px;
+    }
+}

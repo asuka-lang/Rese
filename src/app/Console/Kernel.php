@@ -15,13 +15,14 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('reservations:send-reminders')->dailyAt('9:00');
+        // $schedule->command('reservations:send-reminders')->everyMinute(); // テスト用
     }
 
     /**
      * Register the commands for the application.
      *
-     * @return void
+     * @return voidcrowq:
      */
     protected function commands()
     {

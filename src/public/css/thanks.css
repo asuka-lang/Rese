@@ -1,60 +1,65 @@
-body {
-    min-width: 1040px;
-    background: #f5f3f3;
-}
-
-.header {
-    padding: 50px 100px;
-}
-
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-}
-
-.homepage-ttl {
-    display: flex;
-}
-
-.rese-icon {
-    box-shadow: 3px 3px 2px #99979e;
-}
-
-.title {
-    padding-left: 20px;
-}
-
-h1 {
-    margin: auto;
-    color: rgb(5, 90, 248);
-}
-
-.thanks__content{
-    width: 28%;
-    height: 300px;
-    margin: 0 auto;
-    padding: 50px;
+.thanks__content,
+.done__content{
+    height: 200px;
+    margin: 100px auto;
+    padding: 20px 0;
+    width: min(85%, 400px);
     border: 2px solid #f1f0f5;
     border-radius: 5px;
     box-shadow: 2px 2px 1px #99979e;
     background: #fff;
 }
 
-.registered{
-    font-size: 24px;
+.thanks__message,
+.done__message{
+    width: min(95%, 300px);
+    margin: 0 auto;
 }
 
-.login__button{
+.registered,
+.reserved{
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.login__button,
+.back__button{
     text-align: center;
 }
 
-.login{
-    margin: 20px;
-    height: 35px;
-    width: 120px;
+.login,
+.home{
+    height: 30px;
+    padding: 0 20px;
     background: rgb(5, 90, 248);
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 
+@media (min-width:769px){
+    .thanks__content,
+    .done__content{
+        width: 450px;
+        height: 280px;
+    }
+
+    .thanks__message,
+    .done__message{
+        width: 100%;
+        margin: 0;
+    }
+
+    .registered,
+    .reserved{
+        font-size: 24px;
+        line-height: 70px;
+    }
+
+    .login,
+    .home{
+        height: 40px;
+        font-size: 18px;
+    }
+}

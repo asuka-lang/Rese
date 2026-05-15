@@ -1,0 +1,81 @@
+.verify-email__message{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.message-ttl{
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.message-text{
+    font-size: 15px;
+    color: #394550;
+}
+
+.resend-message{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.send-message{
+    margin: 20px auto;
+    font-size: 16px;
+    width: 85%;
+    font-weight: bolder;
+    color: #ee1f1f;
+}
+
+.verification-resend{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.resend-btn{
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    background: #f6ef57;
+    color: #271d1d;
+}
+
+.logout-btn{
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    text-decoration: underline;
+    background: none;
+}
+
+@media (min-width:769px){
+    .message-ttl {
+        font-size: 25px;
+    }
+
+    .message-text{
+        font-size: 20px;
+    }
+
+    .send-message{
+        font-size: 23px;
+    }
+
+    .verification-resend{
+        justify-content: left;
+    }
+
+    .resend-btn{
+        font-size: 21px;
+        padding: 15px;
+    }
+
+    .logout-btn{
+        font-size: 21px;
+        padding: 15px;
+    }
+}

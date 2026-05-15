@@ -161,6 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Laravel\Ui\UiServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -175,6 +176,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
+        App\Providers\AdminLoginServiceProvider::class,
+        App\Providers\AdminRegisterServiceProvider::class,
+        App\Providers\ManagerLoginServiceProvider::class,
 
     ],
 
@@ -232,5 +236,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+
+    'qr_secret' => env('QR_SECRET', 'defaultqrsecretkey'),
 
 ];

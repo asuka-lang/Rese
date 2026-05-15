@@ -14,7 +14,12 @@ class Reserve extends Model
         'shop_id',
         'date',
         'time',
-        'number'
+        'number',
+        'price',
+        'is_paid',
+        'payment_intent_id',
+        'qr_token',
+        'is_reviewed',
     ];
 
     public function user()

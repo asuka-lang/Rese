@@ -10,25 +10,46 @@ class Shop extends Model
     use HasFactory;
 
     protected $fillable =[
-        'title','area', 'genre', 'information', 'image'
+        'title','area_id', 'genre_id',
+        'manager_id', 'information', 'image'
     ];
+
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
+
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class);
+    }
 
     public function favorite()
     {
         return $this->hasMany(Favorite::class);
     }
 
-    public function scopeAreaSearch($query,$area)
+    public function reserve()
     {
-        if(!empty($area)){
-            $query->where('area',$area);
+        return $this->hasMany(Reserve::class);
+    }
+
+    public function manager()
+    {
+        return $this->belongsTo(Manager::class);
+    }
+
+    public function scopeAreaSearch($query,$area_id)
+    {
+        if(!empty($area_id)){
+            $query->where('area_id',$area_id);
         }
     }
 
-    public function scopeGenreSearch($query,$genre)
+    public function scopeGenreSearch($query,$genre_id)
     {
-        if(!empty($genre)){
-            $query->where('genre',$genre);
+        if(!empty($genre_id)){
+            $query->where('genre_id',$genre_id);
         }
     }
 

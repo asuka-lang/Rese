@@ -1,0 +1,324 @@
+.shop-reserve__content{
+    width: 85%;
+    margin: 20px auto;
+}
+
+.shop-reserve__ttl{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back__button{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 3px 3px 2px #99979e;
+}
+
+.ttl{
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.shop-reserves{
+    width: min(100%, 1400px);
+}
+
+.shop-reserves__box {
+    width: min(100%, 650px);
+    border-spacing: 0 15px;
+}
+
+.shop-reserves__box,
+.box-body,
+.box-inner{
+    display: block;
+}
+
+.box__header{
+    display: none;
+}
+
+.box-inner {
+    border: 1px solid #dfdfde;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.data{
+    padding: 8px 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    width: min(95%, 500px);
+    margin: 0 auto;
+    font-size: 16px;
+    color: #493c3c;
+}
+
+.data[data-label]::before{
+    content: attr(data-label);
+    font-weight: bold;
+    color: #666;
+    font-size: 16px;
+}
+
+.price-data,
+.payment-completed,
+.price-form,
+.checkIn{
+    display: block;
+}
+
+.price-data{
+    font-size: 17px;
+    font-weight: bolder;
+    padding: 8px 0;
+    text-align: right;
+    width: min(95%, 500px);
+    margin: 0 auto;
+}
+
+.payment-completed {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: right;
+    margin: 0 auto;
+    width: min(95%, 500px);
+    color: #484545;
+}
+
+.price-form {
+    width: min(95%,500px);
+    margin: 0 auto;
+    text-align: right;
+}
+
+.price-btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.price-modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.price-modal.active{
+    display: block;
+}
+
+.modal-overlay{
+    position: absolute;
+    inset: 0;
+}
+
+.price-content{
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    border: 1px solid #62625c;
+    width: min(85%, 400px);
+    padding: 20px;
+    background: #fff;
+}
+
+.close{
+    display: block;
+    margin: 0 0 0 auto;
+    font-size: 18px;
+}
+
+.price-ttl,
+.price-user {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    text-align: center;
+}
+
+.currency {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.amount {
+    line-height: 25px;
+    font-size: 20px;
+    width: 180px;
+}
+
+.caution {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.submit {
+    line-height: 25px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.checkIn {
+    width: min(95%, 500px);
+    margin: 0 auto;
+    padding: 8px 0;
+}
+
+.toCheckIn-page {
+    display: block;
+    line-height: 40px;
+    font-size: 20px;
+    width: 130px;
+    font-weight: bold;
+    margin: 0 0 0 auto;
+    text-align: center;
+    background: #ececee;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.not-reserve {
+    font-size: 21px;
+    text-align: center;
+}
+
+@media(min-width:769px) {
+    .ttl{
+        font-size: 23px;
+    }
+
+    .shop-reserves__box {
+        display: table;
+        border-collapse: collapse;
+        table-layout: auto;
+        width: 100%;
+    }
+
+    .box__header{
+        display: table-header-group;
+        background: #eeeeee;
+    }
+
+    .header-name{
+        width: 100%;
+        border: 1px solid #dfdfde;
+        line-height: 36px;
+        font-size: 17px;
+        color: #4b5057;
+    }
+
+    .user{
+        width: 18%;
+    }
+
+    .date{
+        width: 20%;
+    }
+
+    .time{
+        width: 15%;
+    }
+
+    .number{
+        width: 15%;
+    }
+
+    .other{
+        width: 25%;
+    }
+
+    .box-inner {
+        display: table-row;
+        line-height: 40px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .box-body{
+        display: table-row-group;
+    }
+
+    .shop-reserves__box td{
+        display: table-cell;
+        border-bottom: none;
+        border: 1px solid #baafaf;
+        font-size: 17px;
+    }
+
+    .data[data-label]::before{
+        display: none;
+    }
+
+    .price-data{
+        text-align: center;
+    }
+
+    .payment-completed {
+        text-align: center;
+    }
+
+    .price-form {
+        text-align: center;
+    }
+
+    .price-btn {
+        font-size: 17px;
+    }
+
+    .price-content{
+        width: 400px;
+    }
+
+    .price-ttl,
+    .price-user {
+        font-size: 23px;
+    }
+
+    .currency {
+        font-size: 27px;
+    }
+
+    .amount {
+        line-height: 28px;
+        font-size: 21px;
+    }
+
+    .caution {
+        font-size: 18px
+    }
+
+    .submit {
+        line-height: 25px;
+        font-size: 21px;
+    }
+
+    .toCheckIn-page {
+        font-size: 20px;
+        width: 130px;
+        display: inline-block;
+    }
+
+    .not-reserve {
+        font-size: 23px;
+    }
+}
