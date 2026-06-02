@@ -1,2 +1,4 @@
 *
 !.gitignore
+!shop-img/
+!shop-img/**
