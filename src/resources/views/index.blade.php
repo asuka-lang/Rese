@@ -16,7 +16,7 @@
         <div class="shop__text">
             <h2 class="shop__title">{{ $shop['title'] }}</h2>
             <span class="shop__area">#{{ $shop['area']['name'] }}</span>
-            <s class="shop__genre">#{{ $shop['genre']['name'] }}</s
+            <span class="shop__genre">#{{ $shop['genre']['name'] }}</span>
             <div class="buttons">
                 <form class="detail-form" action="/detail/{shop_id}" method="get">
                     @csrf
