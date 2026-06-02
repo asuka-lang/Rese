@@ -14,7 +14,7 @@ services:
   php:
     build: ./docker/php
     volumes:
-      - ./src:/var/www/
+      - ./src:/var/www/docker exec rese-mysql mysqldump -u root -p rese managers > managers.sql
 
   mysql:
     image: mysql:8.0.26
