@@ -76,7 +76,7 @@ Route::prefix('manager')->group(function(){
     Route::post('/qr-checkin',[ManagerController::class,'QrScan'])->name('store.QrScan');
 });
 Route::prefix('payment')->group(function(){
-    Route::get('/checkout/{reservation_id}', [PaymentController::class, 'checkout'])->name('payment.checkout');
+    Route::get('/checkout/{reserve}', [PaymentController::class, 'checkout'])->name('payment.checkout');
     Route::get('/success', function(){
         return view('payment.success');
     })->name('payment.success');

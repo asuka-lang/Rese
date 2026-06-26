@@ -136,7 +136,7 @@
                         </tr>
                         <tr class="reserves-table__row">
                             <td class="payment" colspan="2">
-                                <a href="{{ route('payment.checkout',['reservation_id'=>$reserve->id]) }}" class="payment-button">料金を支払う</a>
+                                <a href="{{ route('payment.checkout',['reserve'=> $reserve->id ]) }}" class="payment-button">料金を支払う</a>
                             </td>
                         </tr>
                         @endif
