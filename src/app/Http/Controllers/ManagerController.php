@@ -109,11 +109,6 @@ class ManagerController extends Controller
             return response()->json(['error' =>'QRデータが不完全です'],400);
         }
 
-        // QR期限（5分以内）
-        if(Carbon::now()->timestamp - $ts > 300){
-            return response()->json(['error' => 'QRコードの有効期限切れです'],403);
-        }
-
         // 署名検証
         $expectedSig = hash_hmac(
             'sha256',
@@ -124,12 +119,19 @@ class ManagerController extends Controller
             return response()->json(['error' => 'QR署名が不正です'],403);
         }
 
-        // 予約IDチェック
         $reservation = Reserve::find($reservationId);
+        // 予約IDチェック
         if(!$reservation){
             return response()->json(['error' => '予約が見つかりません'], 404);
         }
-
+        //QRトークン検証
+        if($reservation->qr_token !== $sig){
+            return response()->json(['error' => 'QRが無効です'],403);
+        }
+        // QRトークン有効期限チェック
+        if($reservation->qr_token_expires_at && now()->greaterThan($reservation->qr_token_expires_at)){
+            return response()->json(['error' => 'QRトークンの有効期限が切れています'],403);
+        }
         // すでにチェックイン済みか
         if($reservation->checkin_at){
             return response()->json(['error' => 'すでにチェックイン済みです'],409);
@@ -137,6 +139,8 @@ class ManagerController extends Controller
 
         // チェックイン処理
         $reservation->checkin_at = Carbon::now();
+        $reservation->qr_token = null; // QRトークンを無効化
+        $reservation->qr_token_expires_at = null; // QRトークンの有効期限をクリア
         $reservation->save();
 
         return response()->json(['message' => 'チェックイン完了しました']);
