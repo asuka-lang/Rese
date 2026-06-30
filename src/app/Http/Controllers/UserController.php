@@ -79,7 +79,9 @@ class UserController extends Controller
 
     public function generateQr($id)
     {
-        $reservation = Reserve::findOrFail($id);
+        $user = Auth::user();
+        $userId = $user->id;
+        $reservation = Reserve::where('id', $id)->where('user_id', $userId)->firstOrFail();
 
         // QRペイロード
         $payload = [
@@ -98,7 +100,7 @@ class UserController extends Controller
 
         // DB に保存
         $reservation->qr_token = $signature;
-        $reservation->qr_token_expires_at = now()->addHours(2);
+        $reservation->qr_token_expires_at = now()->addMinutes(5); // 5分後に有効期限切れ
         $reservation->save();
 
         return response()->json([
