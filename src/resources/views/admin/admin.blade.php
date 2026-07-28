@@ -23,7 +23,7 @@
                         @csrf
                         <table class="form__table">
                             <tr class=" form__table__row">
-                                <td class="img"><img class=" user-icon" src="{{ asset('img/user.jpg') }}" alt="画像" /></td>
+                                <td class="img"><i class="fa-solid fa-user user-icon"></i></td>
                                 <td class="input"><input class="name" type="text" name="name" placeholder="Username" /></td>
                             </tr>
                             @error('name')
@@ -33,7 +33,7 @@
                             </tr>
                             @enderror
                             <tr class="form__table__row">
-                                <td class="img"><img class="email-icon" src="{{ asset('img/mail.jpg') }}" alt="画像" /></td>
+                                <td class="img"><i class="fa-solid fa-envelope email-icon"></i></td>
                                 <td class="input"><input class="email" type="email" name="email" placeholder="Email" /></td>
                             </tr>
                             @error('email')
@@ -43,7 +43,7 @@
                             </tr>
                             @enderror
                             <tr class="form__table__row">
-                                <td class="img"><img class="pass-icon" src="{{ asset('img/pass.jpg') }}" alt="画像" /></td>
+                                <td class="img"><i class="fa-solid fa-lock pass-icon"></i></td>
                                 <td class="input"><input class="password" type="password" name="password" placeholder="Password" /></td>
                             </tr>
                             @error('password')
@@ -79,7 +79,7 @@
     <table class="data__table">
         <thead class="data__header">
             <tr class="columns">
-                <th class="column1">店舗No.</th>
+                <th class="column1">No.</th>
                 <th class="column2">店舗名</th>
                 <th class="column3">地域</th>
                 <th class="column4">ジャンル</th>
@@ -89,7 +89,7 @@
         <tbody class="data__body">
             @foreach($shops as $shop)
             <tr class="data">
-                <td class="data1" data-label="店舗No.">{{ $shop['id']}}</td>
+                <td class="data1" data-label="No.">{{ $shop['id']}}</td>
                 <td class="data2" data-label="店舗名">{{ $shop['title']}}</td>
                 <td class="data3" data-label="地域">{{ $shop['area']['name']}}</td>
                 <td class="data4" data-label="ジャンル">{{ $shop['genre']['name']}}</td>
@@ -149,6 +149,7 @@
 </div>
 @endsection
 @section('script')
+<script src="https://kit.fontawesome.com/6ab37a39bf.js" crossorigin="anonymous"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         //新規登録(店舗代表者)画面を開く

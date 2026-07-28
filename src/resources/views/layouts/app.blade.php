@@ -8,6 +8,7 @@
     <title>Rese</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    <script src="https://kit.fontawesome.com/6ab37a39bf.js" crossorigin="anonymous"></script>
     @yield('css')
 </head>
 

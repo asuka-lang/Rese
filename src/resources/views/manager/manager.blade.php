@@ -1,6 +1,7 @@
 @extends('layouts.menubar')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/manager.css') }}">
+<script src="https://kit.fontawesome.com/6ab37a39bf.js" crossorigin="anonymous"></script>
 @endsection
 
 @section('content')
@@ -46,23 +47,27 @@
                         <p class="label">名称</p>
                         <input class="update-title" type="text" name="title" value="{{ $shop['title'] }}" />
                         <p class="label">地域</p>
-                        <select class="update-area" name="area_id">
-                            <option value="{{ $shop['area_id'] }}">
-                                {{ $shop['area']['name'] }}
-                            </option>
-                            @foreach($areas as $area)
-                            <option value="{{ $area['id'] }}">{{ $area['name']}}</option>
-                            @endforeach
-                        </select>
+                        <div class="update-select">
+                            <select class="update-area" name="area_id">
+                                <option value="{{ $shop['area_id'] }}">
+                                    {{ $shop['area']['name'] }}
+                                </option>
+                                @foreach($areas as $area)
+                                <option value="{{ $area['id'] }}">{{ $area['name']}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <p class="label">ジャンル</p>
-                        <select class="update-genre" name="genre_id">
-                            <option value="{{ $shop['genre_id'] }}">
-                                {{ $shop['genre']['name'] }}
-                            </option>
-                            @foreach($genres as $genre)
-                            <option value="{{ $genre['id'] }}">{{ $genre['name']}}</option>
-                            @endforeach
-                        </select>
+                        <div class="update-select">
+                            <select class="update-genre" name="genre_id">
+                                <option value="{{ $shop['genre_id'] }}">
+                                    {{ $shop['genre']['name'] }}
+                                </option>
+                                @foreach($genres as $genre)
+                                <option value="{{ $genre['id'] }}">{{ $genre['name']}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <p class="label">Information</p>
                         <textarea class="update-information" name="information">{{ $shop['information'] }}</textarea>
                         <p class="label">トップ画像</p>

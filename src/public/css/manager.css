@@ -155,6 +155,25 @@
     width: 200px;
     margin-bottom: 10px;
     margin-top: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid;
+}
+
+.update-select{
+    position: relative;
+}
+
+.update-select::after{
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 45%;
+    right: auto;
+    left: 130px;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .update-area,
@@ -165,6 +184,8 @@
     padding-left: 10px;
     margin-bottom: 10px;
     margin-top: 5px;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .update-information{
@@ -180,7 +201,17 @@
 .update-image{
     font-size: 16px;
     width: 100%;
+    line-height: 30px;
     margin-top: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.update-image::file-selector-button{
+    background: #c8c9cc;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
 }
 
 .shop-register{
@@ -350,6 +381,7 @@
 
     .update-image {
         font-size: 19px;
+        line-height: 40px;
     }
 
     .shop-register {

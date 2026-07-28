@@ -15,6 +15,7 @@ class Reserve extends Model
         'date',
         'time',
         'number',
+        'reminded_at',
         'price',
         'is_paid',
         'payment_intent_id',

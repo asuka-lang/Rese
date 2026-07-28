@@ -113,6 +113,8 @@
         </form>
     </div>
 </div>
+@endsection
+@section('script')
 <script type="text/javascript">
     document.getElementById('inputDate').addEventListener('input', (event) => {
         const count = document.querySelector('.date');
