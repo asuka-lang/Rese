@@ -252,7 +252,6 @@
 </div>
 @endsection
 @section('script')
-<script src="https://kit.fontawesome.com/6ab37a39bf.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {

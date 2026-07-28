@@ -36,9 +36,27 @@
     display: block;
     margin: 10px 0;
     padding: 0 10px;
-    height: 36px;
+    height: 38px;
     width: min(80%, 200px);
     font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.select__name{
+    position: relative;
+}
+
+.select__name::after{
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: auto;
+    left: 170px;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .select__name span {
@@ -61,6 +79,9 @@
     width: 90%;
     font-size: 16px;
     padding: 0 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid;
 }
 
 .text{
@@ -113,6 +134,10 @@
     .label__ttl,
     .label-text{
         font-size: 18px;
+    }
+
+    .select__name::after{
+        left: 220px;
     }
 
     .name {

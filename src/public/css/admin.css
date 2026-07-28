@@ -164,6 +164,7 @@
 
 .shop__image{
     width: 100%;
+    height: auto;
 }
 
 .shop__img{
@@ -172,8 +173,9 @@
 
 .shop__information{
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     text-align: left;
+    font-size: 16px;
 }
 
 .update{
@@ -367,11 +369,11 @@
     }
 
     .shop-detail {
-        width: min(80%, 750px);
+        width: min(50%, 600px);
     }
 
     .shop__information{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .update {

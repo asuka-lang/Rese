@@ -44,14 +44,14 @@
 }
 
 .img{
-    width: 15%;
+    text-align: center;
 }
 
 .user-icon,
 .email-icon,
 .pass-icon{
-    width: 80%;
-    height: 100%;
+    font-size: 26px;
+    color: #555;
 }
 
 .name,

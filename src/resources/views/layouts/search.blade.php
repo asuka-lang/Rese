@@ -39,7 +39,7 @@
                 </div>
                 <div class="input-text">
                     <button class="search-button" type="submit">
-                        <div class="my-parts"><span></span></div>
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
                     </button>
                     <input class="search-text" type="search" name="keyword" placeholder="Search..." value="{{ old('keyword') }}" />
                 </div>

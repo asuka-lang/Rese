@@ -19,7 +19,7 @@
             @csrf
             <table class="form__table">
                 <tr class="form__table__row">
-                    <td class="img"><img class="email-icon" src="{{ asset('img/mail.jpg') }}" alt="" /></td>
+                    <td class="img"><i class="fa-solid fa-envelope email-icon"></i></td>
                     <td class="input"><input class="email" type="email" name="email" placeholder="Email" value="{{ old('email') }}" /></td>
                 </tr>
                 @error('email')
@@ -29,7 +29,7 @@
                 </tr>
                 @enderror
                 <tr class="form__table__row">
-                    <td class="img"><img class="pass-icon" src="{{ asset('img/pass.jpg') }}" alt="" /></td>
+                    <td class="img"><i class="fa-solid fa-lock pass-icon"></i></td>
                     <td class="input"><input class="password" type="password" name="password" placeholder="Password" /></td>
                 </tr>
                 @error('password')
