@@ -8,10 +8,10 @@
 予約日のお知らせをいたします。
 
 **【予約内容】**
-### Shop::{{ $reservation->shop->title }}
-### Date::{{ $reservation->date }}
-### Time::{{ $reservation->time }}
-### Number::{{ $reservation->number }}
+### 店舗::{{ $reservation->shop->title }}
+### 日付::{{ $reservation->date }}
+### 時間::{{ $reservation->time }}
+### 人数::{{ $reservation->number }}
 
 ご不明な点がございましたら、お気軽にお問い合わせください。
 

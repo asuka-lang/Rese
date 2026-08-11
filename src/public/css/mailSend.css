@@ -52,7 +52,7 @@
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     position: absolute;
-    top: 50%;
+    top: 20px;
     right: auto;
     left: 170px;
     transform: translateY(-50%);

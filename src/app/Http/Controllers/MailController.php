@@ -42,5 +42,15 @@ class MailController extends Controller
 
         return back()->with('success2', '送信しました');
     }
+
+    // public function MailContact()
+    // {
+    //     $data = [
+    //         'title' => '件名',
+    //         'text' => '本文'
+    //     ];
+
+    //     return view('mail.mailContact', compact('data'));
+    // }
 }
 

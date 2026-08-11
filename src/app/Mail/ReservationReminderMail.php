@@ -31,7 +31,6 @@ class ReservationReminderMail extends Mailable
     public function build()
     {
         return $this->markdown('mail.reservation_reminder')
-            ->from('AdminMail@rese.com', 'Rese')
             ->subject('【リマインダー】予約のお知らせ - ')
             ->with('reservation', $this->reservation,);
     }
