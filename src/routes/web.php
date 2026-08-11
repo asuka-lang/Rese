@@ -58,6 +58,7 @@ Route::prefix('admin')->group(function(){
     Route::post('/mail/user',[MailController::class, 'sendUser']);
     Route::post('/mail/shop',[MailController::class, 'sendShop']);
 });
+// Route::get('/mail/preview',[MailController::class,'MailContact']);
 Route::prefix('manager')->group(function(){
     Route::middleware('auth:manager')->group(function(){
         Route::get('',[ManagerController::class, 'manager']);

@@ -32,7 +32,6 @@ class AdminMail extends Mailable
     public function build()
     {
         return $this->view('mail.mailContact')
-            ->from('AdminMail@rese.com','Rese')
             ->subject($this->title)
             ->with('data',$this->data);
     }
